@@ -12,3 +12,4 @@ C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\refint\fouri
 C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.pdb
 C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.genruntimeconfig.cache
 C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\ref\fourinarow.dll
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.sourcelink.json
