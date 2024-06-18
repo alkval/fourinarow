@@ -1,0 +1,14 @@
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\bin\Debug\net8.0\fourinarow.exe
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\bin\Debug\net8.0\fourinarow.deps.json
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\bin\Debug\net8.0\fourinarow.runtimeconfig.json
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\bin\Debug\net8.0\fourinarow.dll
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\bin\Debug\net8.0\fourinarow.pdb
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.AssemblyInfoInputs.cache
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.AssemblyInfo.cs
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.dll
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\refint\fourinarow.dll
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.pdb
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\fourinarow.genruntimeconfig.cache
+C:\Users\alexa\Documents\uis\fourinarow\fourinarow\obj\Debug\net8.0\ref\fourinarow.dll
