@@ -2,18 +2,23 @@
 
 namespace fourinarow
 {
+    
     class Program
     {
-        static string[,] boardString = new string[,]
+        static string[,] NewBoardStr()
         {
+            return new string[,]
+            {
             {"O","O","O","O","O","O","O"},
             {"O","O","O","O","O","O","O"},
             {"O","O","O","O","O","O","O"},
             {"O","O","O","O","O","O","O"},
             {"O","O","O","O","O","O","O"},
             {"O","O","O","O","O","O","O"}
-        };
-        
+            };
+        }
+        static string[,] boardString = NewBoardStr();
+
         public static int[,] board = new int[,]
         {
             {0,0,0,0,0,0,0},
@@ -43,16 +48,17 @@ namespace fourinarow
                         {
                             for (int j = 0; j < 7; j++)
                             {
-                                board[i,j] = 0;
+                                board[i, j] = 0;
                             }
                         }
+                        boardString = NewBoardStr();
                         Main(args);
                     }
                     else
                     {
                         break;
                     }
-                    
+
 
                     break;
                 }
@@ -62,27 +68,27 @@ namespace fourinarow
 
         }
         static void DrawBoard()
+        {
+            Console.Clear();
+            for (int i = 0; i < 6; i++)
             {
-                Console.Clear();
-                for (int i = 0; i < 6; i++)
+                for (int j = 0; j < 7; j++)
                 {
-                    for (int j = 0; j < 7; j++)
+                    if (board[i, j] == 1)
                     {
-                        if (board[i,j] == 1)
-                        {
-                            boardString[i,j] = "\x1b[91m■\x1b[39m";
-                        }
-                        else if (board[i,j] == 2)
-                        {
-                            boardString[i,j] = "\x1b[96m■\x1b[39m";
-                        }
-                        Console.Write(" " + boardString[i,j]);
+                        boardString[i, j] = "\x1b[91m■\x1b[39m";
                     }
-                    Console.WriteLine();
+                    else if (board[i, j] == 2)
+                    {
+                        boardString[i, j] = "\x1b[96m■\x1b[39m";
+                    }
+                    Console.Write(" " + boardString[i, j]);
                 }
-                Console.WriteLine(" -------------");
-                Console.WriteLine(" 1 2 3 4 5 6 7");
+                Console.WriteLine();
             }
+            Console.WriteLine(" -------------");
+            Console.WriteLine(" 1 2 3 4 5 6 7");
+        }
         static int CheckWin()
         {
             if (CheckHorizontal() != 0)
@@ -109,11 +115,11 @@ namespace fourinarow
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    if (board[i,j] == 1 && board[i,j+1] == 1 && board[i,j+2] == 1 && board[i,j+3] == 1)
+                    if (board[i, j] == 1 && board[i, j + 1] == 1 && board[i, j + 2] == 1 && board[i, j + 3] == 1)
                     {
                         return 1;
                     }
-                    else if (board[i,j] == 2 && board[i,j+1] == 2 && board[i,j+2] == 2 && board[i,j+3] == 2)
+                    else if (board[i, j] == 2 && board[i, j + 1] == 2 && board[i, j + 2] == 2 && board[i, j + 3] == 2)
                     {
                         return 2;
                     }
@@ -128,11 +134,11 @@ namespace fourinarow
             {
                 for (int j = 0; j < 7; j++)
                 {
-                    if (board[i,j] == 1 && board[i+1,j] == 1 && board[i+2,j] == 1 && board[i+3,j] == 1)
+                    if (board[i, j] == 1 && board[i + 1, j] == 1 && board[i + 2, j] == 1 && board[i + 3, j] == 1)
                     {
                         return 1;
                     }
-                    else if (board[i,j] == 2 && board[i+1,j] == 2 && board[i+2,j] == 2 && board[i+3,j] == 2)
+                    else if (board[i, j] == 2 && board[i + 1, j] == 2 && board[i + 2, j] == 2 && board[i + 3, j] == 2)
                     {
                         return 2;
                     }
@@ -147,11 +153,11 @@ namespace fourinarow
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    if (board[i,j] == 1 && board[i+1,j+1] == 1 && board[i+2,j+2] == 1 && board[i+3,j+3] == 1)
+                    if (board[i, j] == 1 && board[i + 1, j + 1] == 1 && board[i + 2, j + 2] == 1 && board[i + 3, j + 3] == 1)
                     {
                         return 1;
                     }
-                    else if (board[i,j] == 2 && board[i+1,j+1] == 2 && board[i+2,j+2] == 2 && board[i+3,j+3] == 2)
+                    else if (board[i, j] == 2 && board[i + 1, j + 1] == 2 && board[i + 2, j + 2] == 2 && board[i + 3, j + 3] == 2)
                     {
                         return 2;
                     }
@@ -161,11 +167,11 @@ namespace fourinarow
             {
                 for (int j = 3; j < 7; j++)
                 {
-                    if (board[i,j] == 1 && board[i+1,j-1] == 1 && board[i+2,j-2] == 1 && board[i+3,j-3] == 1)
+                    if (board[i, j] == 1 && board[i + 1, j - 1] == 1 && board[i + 2, j - 2] == 1 && board[i + 3, j - 3] == 1)
                     {
                         return 1;
                     }
-                    else if (board[i,j] == 2 && board[i+1,j-1] == 2 && board[i+2,j-2] == 2 && board[i+3,j-3] == 2)
+                    else if (board[i, j] == 2 && board[i + 1, j - 1] == 2 && board[i + 2, j - 2] == 2 && board[i + 3, j - 3] == 2)
                     {
                         return 2;
                     }
@@ -173,7 +179,7 @@ namespace fourinarow
             }
             return 0;
         }
-        
+
 
     }
 
@@ -191,51 +197,51 @@ namespace fourinarow
 
         public static void PlayerMove()
         {
-            
+
             if (turn % 2 == 0)
             {
                 Console.WriteLine("Player 1 make your move (1-7)");
-            int move = Convert.ToInt32(Console.ReadLine());
-            if (move < 1 || move > 7)
-            {
-                Console.WriteLine("Invalid move");
-                PlayerMove();
-            }
-            else
-            {
-                for (int i = 5; i >= 0; i--)
+                int move = Convert.ToInt32(Console.ReadLine());
+                if (move < 1 || move > 7)
                 {
-                    if (Program.board[i,move-1] == 0)
+                    Console.WriteLine("Invalid move");
+                    PlayerMove();
+                }
+                else
+                {
+                    for (int i = 5; i >= 0; i--)
                     {
-                        Program.board[i,move-1] = 1;
-                        break;
+                        if (Program.board[i, move - 1] == 0)
+                        {
+                            Program.board[i, move - 1] = 1;
+                            break;
+                        }
                     }
                 }
-            }
             }
             else
             {
                 Console.WriteLine("Player 2 make your move (1-7)");
-            int move = Convert.ToInt32(Console.ReadLine());
-            if (move < 1 || move > 7)
-            {
-                Console.WriteLine("Invalid move");
-                PlayerMove();
-            }
-            else
-            {
-                for (int i = 5; i >= 0; i--)
+                int move = Convert.ToInt32(Console.ReadLine());
+                if (move < 1 || move > 7)
                 {
-                    if (Program.board[i,move-1] == 0)
+                    Console.WriteLine("Invalid move");
+                    PlayerMove();
+                }
+                else
+                {
+                    for (int i = 5; i >= 0; i--)
                     {
-                        Program.board[i,move-1] = 2;
-                        break;
+                        if (Program.board[i, move - 1] == 0)
+                        {
+                            Program.board[i, move - 1] = 2;
+                            break;
+                        }
                     }
                 }
             }
-            }
-            
-            
+
+
         }
     }
 }
