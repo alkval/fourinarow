@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fourinarow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f09b8c8e29fcd8a77e61a62860248d06ed9f652f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a3fbca802f8f11fd4d61cbcf52dcd962273dfe7")]
 [assembly: System.Reflection.AssemblyProductAttribute("fourinarow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fourinarow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
